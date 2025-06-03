@@ -11,6 +11,9 @@ https://github.com/argoproj/argo-cd/blob/master/manifests/install.yaml
 https://github.com/argoproj/argo-helm/tree/main/charts/argo-cd  
 
 #####################################  
+GitHub內的argocd Helm版本，內包SVC 搭配MetalLB 符合內網曝露專用  
+修改values.yaml裡的  1003跟1004行 (1004添加MetalLB的IP Ranger即可，預設曝露80 Port-在1013行)  
+#####################################  
 ※安装配置清单中包含的 ClusterRoleBinding 資源引用 argocd 名稱空間， 如果 Argo CD 安装到不同的名稱空間，要另外修改引用資源的名稱空間  
 
 1. kubectl create namespace argocd  
